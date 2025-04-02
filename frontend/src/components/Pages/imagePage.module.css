@@ -1,0 +1,28 @@
+.main-container {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+.image {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    }
+
+    .bouton {
+        height: 3rem;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 1.5rem;
+        background-color: #5bea13;
+        display: block;
+        margin: 5rem auto 0;
+        padding: 0 2rem;
+    }
+
+    .link {
+        text-decoration: none;
+        
+    }
