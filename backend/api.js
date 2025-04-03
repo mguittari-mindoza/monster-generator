@@ -22,12 +22,11 @@ const openai = new OpenAI({
 app.post("/generate-image", async (req, res) => {
   const settings = req.body;
 
-  console.log("settings ???", settings);
   try {
   
     const image = await openai.images.generate({
       model: "dall-e-3",
-      prompt: `Full body view of a figurine of a fantasy monster with a ${settings.color} color and a ${settings.size} size, holding a ${settings.weapon}, placed on a tabletop roleplaying game board. The monster stands on a detailed game tile with fantasy terrain (like stone, grass, dungeon, forest, lava, etc.) and the background is immersive, matching the monster's theme and environment. Stylized like a painted miniature. No text, no captions, no watermark.`
+      prompt: `A full-body view monster with a ${settings.color} color and a ${settings.size} size, holding a ${settings.weapon}. The creature stands in a vibrant and whimsical ${settings.decor} environment. The illustration is in a clean, expressive cartoon style — with bold lines, exaggerated features, and bright colors. The mood is fun and fantastical. No text.`
 
     });
 

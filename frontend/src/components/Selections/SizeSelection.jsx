@@ -1,4 +1,4 @@
-const SizeSelection = ({ selectedSize, styles, handleChange }) => {
+const SizeSelection = ({ selectedSize, styles, handleChange, options }) => {
     return (
         <select
                 className={styles.selector}
@@ -6,13 +6,16 @@ const SizeSelection = ({ selectedSize, styles, handleChange }) => {
                 id="size"
                 value={selectedSize}
                 onChange={handleChange}
+                
             >
                 <option value="" disabled>
-                Taille
+                Size
             </option>
-            <option value="small">Petit</option>
-            <option value="medium">Moyen</option>
-            <option value="gigantic">Gigantesque</option>
+            {options.size.map((size) => (
+                <option key={size} value={size}>
+                    {size.charAt(0).toUpperCase() + size.slice(1)}
+                </option>
+            ))}
         </select>
     );
 };

@@ -1,0 +1,35 @@
+.main-container {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    text-align: center;
+    font: normal normal normal 24px/33px Comic Sans MS;
+    color: #FFFFFF;
+    margin: 0 auto 2rem auto;   
+}
+
+.bouton {
+    height: 3rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.5rem;
+    background-color: #5bea13;
+    display: block;
+    padding: 0 2rem;
+}
+
+.link {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .bouton:hover {
+        cursor: pointer;
+    }
+}

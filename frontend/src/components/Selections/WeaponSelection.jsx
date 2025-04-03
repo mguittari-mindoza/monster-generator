@@ -1,4 +1,4 @@
-const WeaponSelection = ({ selectedWeapon, styles, handleChange }) => {
+const WeaponSelection = ({ selectedWeapon, styles, handleChange, options }) => {
     return (
         <select
                 className={styles.selector}
@@ -6,15 +6,16 @@ const WeaponSelection = ({ selectedWeapon, styles, handleChange }) => {
                 id="weapon"
                 value={selectedWeapon}
                 onChange={handleChange}
+                
             >
                 <option value="" disabled>
-                    Arme
+                    Weapon
                 </option>
-                <option value="sword">Epée</option>
-                <option value="axe">Hache</option>
-                <option value="bow">Arc</option>
-                <option value="shotgun">Fusil</option>
-                <option value="spear">Lance</option>
+                {options.weapon.map((weapon) => (
+                    <option key={weapon} value={weapon}>
+                        {weapon.charAt(0).toUpperCase() + weapon.slice(1)}
+                    </option>
+                ))}
         </select>
     );
 };

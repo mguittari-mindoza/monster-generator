@@ -1,4 +1,4 @@
-const ColorSelection = ({ selectedColor, styles, handleChange }) => {
+const ColorSelection = ({ selectedColor, styles, handleChange, options }) => {
     return (
         <select
                 className={styles.selector}
@@ -6,16 +6,16 @@ const ColorSelection = ({ selectedColor, styles, handleChange }) => {
                 id="color"
                 value={selectedColor}
                 onChange={handleChange}
+                
             >
                 <option value="" disabled>
-                    Couleur
+                    Color
                 </option>
-                <option value="red">Rouge</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="black">Noir</option>
-                <option value="silver">Argenté</option>
-                <option value="multicolored">Multicolore</option>
+                {options.color.map((color) => (
+                    <option key={color} value={color}>
+                        {color.charAt(0).toUpperCase() + color.slice(1)}
+                    </option>
+                ))}
         </select>
     );
 };

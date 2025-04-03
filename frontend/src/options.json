@@ -1,0 +1,6 @@
+{
+    "color": ["red", "blue", "green", "silver", "black", "multicolor"],
+    "size": ["little", "medium", "gigantic"],
+    "weapon": ["sword", "axe", "spear", "bow"],
+    "decor": ["castle", "forest", "lake", "swamp", "desert"]
+}

@@ -10,6 +10,7 @@
     margin: auto;
     padding: 1rem;
     display: flex;
+    max-width: 400px;
     }
 
     .bouton {
